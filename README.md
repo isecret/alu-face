@@ -111,7 +111,7 @@
 ## 参数说明
 |  参数   | 必填  | 含义 | 默认值 |
 |  ----  | ----  |  ----  | ----  |
-| element  | 否 | 需要转换表情的标签 | `document.body` |
+| element  | 否 | 需要转换表情的标签容器 | `document.body` |
 | url  | 否 | 表情链接地址，如果你使用本地地址请配置类似 `/path/img/` | `https://res.smzdm.com/images/emotions/` |
 | addClass  | 否 | 表情添加的样式名用于控制样式 | `alu-face` |
 | mapping | 否 | 表情映射关系，一般不需要改动 | {...} |
