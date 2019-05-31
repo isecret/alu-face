@@ -1,6 +1,6 @@
 var ALU = function (config={}) {
-    var url = config.url == undefined ? `https://res.smzdm.com/images/emotions/` : config.url;
-    var addClass = config.addClass == undefined ? `alu-face` : config.addClass;
+    var url = config.url == undefined ? 'https://res.smzdm.com/images/emotions/' : config.url;
+    var addClass = config.addClass == undefined ? 'alu-face' : config.addClass;
     var mapping = config.addClass == undefined ? {
         "高兴": "22.png",
         "皱眉": "23.png",
@@ -88,13 +88,13 @@ var ALU = function (config={}) {
         "坐等": "105.png",
         "看热闹": "106.png",
         "深思": "107.png",
-        "被监视": "108.png",
+        "被监视": "108.png"
     }: config.mapping;
     var element = config.element == undefined ? document.body : config.element;
     var body = element.innerHTML;
     var reg = new RegExp(/\[(.*?)\]/g);
     var html = body.replace(reg, function ($0, $1) {
-        return mapping.hasOwnProperty($1) ? `<img class="`+addClass+`" src="`+url+mapping[$1]+`" title="`+$1+`">` : $0;
+        return mapping.hasOwnProperty($1) ? '<img class="'+addClass+'" src="'+url+mapping[$1]+'" title="'+$1+'">' : $0;
     });
     element.innerHTML = html;
 }
