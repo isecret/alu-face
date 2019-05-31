@@ -92,7 +92,7 @@ var ALU = function (config={}) {
     }: config.mapping;
     var element = config.element == undefined ? document.body : config.element;
     var body = element.innerHTML;
-    var reg = new RegExp(/\[(.*)\]/g);
+    var reg = new RegExp(/\[(.*?)\]/g);
     var html = body.replace(reg, function ($0, $1) {
         return mapping.hasOwnProperty($1) ? `<img class="`+addClass+`" src="`+url+mapping[$1]+`" title="`+$1+`">` : $0;
     });
